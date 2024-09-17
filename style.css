@@ -1,0 +1,407 @@
+/* RESET & GLOBAL STYLES */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Assistant', sans-serif;
+    line-height: 1.6;
+    background-color: #f8fdff;
+    color: #45546A;
+}
+
+.container {
+    width: 85%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* HEADER */
+header {
+    background-color: #45546A;
+    padding: 80px 0;
+    color: #fff;
+    text-align: center;
+    position: relative;
+}
+
+.logo {
+    width: 180px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 20px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+    position: relative;
+}
+
+nav ul li a::after {
+    content: "";
+    display: block;
+    height: 2px;
+    background: #68C5DC;
+    width: 0;
+    transition: width 0.3s;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+/* HERO SECTION */
+.hero {
+    margin-top: 20px;
+}
+
+.hero h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.hero p {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    background-color: #68C5DC;
+    color: #fff;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 30px;
+    transition: background-color 0.3s, transform 0.3s;
+    display: inline-block;
+}
+
+.cta-button:hover {
+    background-color: #fff;
+    color: #68C5DC;
+    border: 2px solid #68C5DC;
+    transform: translateY(-5px);
+}
+
+/* SECTION STYLES */
+.section {
+    padding: 70px 0;
+}
+
+.bg-light {
+    background-color: #fafffb;
+}
+
+h2 {
+    font-size: 2.8em;
+    color: #45546A;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* CARDS */
+.cards {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    min-width: 280px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.card h3 {
+    font-size: 1.9em;
+    color: #68C5DC;
+    margin-bottom: 15px;
+}
+
+.card p {
+    font-size: 1.1em;
+    color: #45546A;
+}
+
+/* CLIENTS & ASSOCIATIONS */
+.clients-logos, .associations-logos {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.client, .association {
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.client:hover, .association:hover {
+    transform: scale(1.1);
+}
+
+.clients-logos img, .associations-logos img {
+    width: 150px;
+    height: auto;
+    opacity: 0.8;
+    transition: opacity 0.3s;
+}
+
+.clients-logos img:hover, .associations-logos img:hover {
+    opacity: 1;
+}
+
+/* FORM */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+form input, form textarea {
+    padding: 15px;
+    font-size: 1em;
+    border: 1px solid #45546A;
+    border-radius: 8px;
+    transition: border-color 0.3s;
+}
+
+form input:focus, form textarea:focus {
+    border-color: #68C5DC;
+    outline: none;
+}
+
+form button {
+    padding: 15px;
+    background-color: #68C5DC;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+form button:hover {
+    background-color: #45546A;
+    transform: translateY(-3px);
+}
+
+/* FOOTER */
+footer {
+    background-color: #45546A;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Section À propos */
+#about {
+}
+
+.about-content {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.about-text {
+    text-align: center;
+}
+
+.about-text h2 {
+    font-size: 2.8em;
+    color: #45546A;
+    margin-bottom: 30px;
+}
+
+.about-text p {
+    font-size: 1.2em;
+    color: #45546A;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.about-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Section Engagements */
+#engagements {
+}
+
+.engagements-content {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.engagements-text {
+    text-align: center;
+}
+
+.engagements-text h2 {
+    font-size: 2.8em;
+    color: #45546A;
+    margin-bottom: 30px;
+}
+
+.engagements-text p {
+    font-size: 1.2em;
+    color: #45546A;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.engagements-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.info-block {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    min-width: 280px;
+    max-width: 360px;
+    text-align: left;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.info-block:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.info-block p {
+    font-size: 1em;
+    color: #45546A;
+}
+
+/* Styles pour la section contact */
+#contact {
+    padding: 40px 0;
+}
+
+#contact h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2em;
+    color: #333;
+}
+
+.contact-info {
+    text-align: center;
+    font-size: 1.2em;
+    color: #555;
+}
+
+.contact-info p {
+    margin: 5px 0;
+}
+
+.contact-name {
+    line-height: 1.0;
+}
+
+.contact-address {
+    font-size: 1.0em;
+    line-height: 1.0;
+}
+
+.contact-email {
+    font-weight: bold;
+    color: #007BFF;
+}
+
+#email-link {
+    text-decoration: none;
+}
+
+.info-block h3 {
+    font-size: 1.8em;
+    color: #68C5DC;
+    margin-bottom: 15px;
+}
+
+ul {
+    list-style-type: disc;
+    margin-left: 40px;
+    font-size: 1.1em;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+/* Flèche de retour en haut */
+.scroll-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #68C5DC;
+    color: #fff;
+    border-radius: 50%;
+    padding: 7px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, transform 0.3s;
+    text-align: center;
+    cursor: pointer;
+    z-index: 1000;
+    width: 40px;
+    height: 40px;
+}
+
+.scroll-top img {
+    width: 25px;
+    height: 25px;
+}
+
+.scroll-top:hover {
+    background-color: #45546A;
+    transform: scale(1.1);
+}
