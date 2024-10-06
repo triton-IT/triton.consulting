@@ -366,6 +366,7 @@ footer {
     padding-top: 1em;
     font-weight: bold;
     color: #45546A;
+    transition: transform 0.3s ease;
 }
 
 .contact-email i {
@@ -375,6 +376,10 @@ footer {
 
 #email-link {
     text-decoration: none;
+}
+
+.contact-email:hover {
+    transform: translateY(-3px);
 }
 
 .info-block h3 {
