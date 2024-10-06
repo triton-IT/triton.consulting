@@ -323,14 +323,28 @@ footer {
 }
 
 /* Styles pour la section contact */
+/* Styles pour la section contact */
 #contact {
     padding: 40px 0;
 }
 
+.contact-info-container {
+    display: flex;
+    justify-content: center; /* Centre horizontalement le conteneur */
+    align-items: center; /* Centre verticalement le conteneur */
+    flex-direction: column;
+}
+
 .contact-info {
-    text-align: center;
     font-size: 1.2em;
     color: #555;
+    display: flex;
+    align-items: flex-start;
+}
+
+.contact-info i {
+    margin-right: 10px;
+    align-self: center; /* Centre l'icône verticalement */
 }
 
 .contact-info p {
@@ -338,6 +352,8 @@ footer {
 }
 
 .contact-name {
+    font-weight: bold;
+    color: #45546A;
     line-height: 1.0;
 }
 
@@ -347,8 +363,14 @@ footer {
 }
 
 .contact-email {
+    padding-top: 1em;
     font-weight: bold;
     color: #45546A;
+}
+
+.contact-email i {
+    margin-right: 10px;
+    align-self: center; /* Centre l'icône verticalement */
 }
 
 #email-link {

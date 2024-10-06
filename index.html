@@ -10,6 +10,7 @@
 
     <!-- Importation de la police "Assistant" -->
     <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     
     <!-- Stylesheet -->
     <link rel="stylesheet" href="style.css">
@@ -215,26 +216,32 @@
     <section id="contact" class="section bg-light">
         <div class="container">
             <h2>Contactez-nous</h2>
-            <div class="contact-info">
-                <p class="contact-name">trITon</p>
-                <p class="contact-address">9 chemin de planevialle</p>
-                <p class="contact-address">63580 Sainte-Catherine</p>
+            <div class="contact-info-container">
+                <div class="contact-info">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div class="contact-address">
+                        <p class="contact-name">trITon</p>
+                        <p>9 chemin de planevialle</p>
+                        <p>63580 Sainte-Catherine</p>
+                    </div>
+                </div>
                 <a id="email-link" href="#"><p class="contact-email" id="email"></p></a>
             </div>
         </div>
     </section>
-
+    
     <a href="#home" class="scroll-top" title="Retour au menu">
         <img src="images/scroll-top.webp" alt="Retour en haut">
     </a>
-
+    
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             var user = 'contact';
             var domain = 'triton.consulting';
             var email = user + '@' + domain;
             var emailLink = 'mailto:' + email;
-            document.getElementById('email').textContent = email;
+            var emailElement = document.getElementById('email');
+            emailElement.innerHTML = '<i class="fas fa-envelope"></i> ' + email;
             document.getElementById('email-link').setAttribute('href', emailLink);
         });
     </script>
