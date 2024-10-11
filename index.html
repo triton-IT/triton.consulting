@@ -24,7 +24,8 @@
                 <h1>Développement & Architecture Informatique</h1>
             </div>
             <nav>
-                <ul>
+                <span class="menu-toggle" onclick="toggleMenu()" onKeyPress="if(event.key === 'Enter') toggleMenu();" role="button" tabindex="0">☰</span>
+                <ul id="menu">
                     <li><a href="#about">À propos</a></li>
                     <li><a href="#services">Services</a></li>
                     <li><a href="#engagements">Engagements</a></li>
@@ -243,6 +244,11 @@
             emailElement.innerHTML = '<i class="fas fa-envelope"></i> ' + email;
             document.getElementById('email-link').setAttribute('href', emailLink);
         });
+        
+        function toggleMenu() {
+            var menu = document.getElementById('menu');
+            menu.classList.toggle('show');
+        }
     </script>
 </body>
 </html>
